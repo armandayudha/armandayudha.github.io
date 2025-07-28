@@ -4033,6 +4033,32 @@
 			vertical-align: middle;
 			margin-top: -2px;
 		}
+
+		.countdown {
+			display: flex;
+			justify-content: center;
+			gap: 10px;
+			margin-top: 30px;
+		}
+
+		.countdown .time-box {
+			background-color: #B38AC6;
+			color: white;
+			padding: 15px 10px;
+			border-radius: 8px;
+			width: 70px;
+			text-align: center;
+		}
+
+		.countdown .time-box .number {
+			font-size: 20px;
+			font-weight: bold;
+		}
+
+		.countdown .time-box .label {
+			font-size: 12px;
+			margin-top: 5px;
+		}
 	</style>
 </head>
 
@@ -4278,6 +4304,58 @@
 																				class="elementor-heading-title elementor-size-default">
 																				- Minggu, 24 September 2023 -</h2>
 																		</div>
+																	</div>
+																	<div class="elementor-element elementor-element-a8a19bc elementor-widget elementor-widget-heading"
+																		data-id="a8a19bc" data-element_type="widget"
+																		data-widget_type="heading.default">
+																		<div class="countdown-wrapper">
+
+
+																			<div class="countdown" id="countdown">
+																				<div class="time-box">
+																					<div class="number" id="days">00
+																					</div>
+																					<div class="label">Days</div>
+																				</div>
+																				<div class="time-box">
+																					<div class="number" id="hours">00
+																					</div>
+																					<div class="label">Hours</div>
+																				</div>
+																				<div class="time-box">
+																					<div class="number" id="minutes">00
+																					</div>
+																					<div class="label">Minutes</div>
+																				</div>
+																				<div class="time-box">
+																					<div class="number" id="seconds">00
+																					</div>
+																					<div class="label">Seconds</div>
+																				</div>
+																			</div>
+																		</div>
+																		<script>
+																			const weddingDate = new Date("2025-08-25T09:00:00").getTime();
+
+																			function updateCountdown() {
+																				const now = new Date().getTime();
+																				const distance = weddingDate - now;
+
+																				const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+																				const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+																				const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+																				const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+																				document.getElementById("days").textContent = String(days).padStart(2, "0");
+																				document.getElementById("hours").textContent = String(hours).padStart(2, "0");
+																				document.getElementById("minutes").textContent = String(minutes).padStart(2, "0");
+																				document.getElementById("seconds").textContent = String(seconds).padStart(2, "0");
+																			}
+
+																			setInterval(updateCountdown, 1000);
+																			updateCountdown();
+																		</script>
+
 																	</div>
 																	<div class="elementor-element elementor-element-2e4e959 elementor-widget elementor-widget-spacer"
 																		data-id="2e4e959" data-element_type="widget"
