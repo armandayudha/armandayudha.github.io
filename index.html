@@ -3289,7 +3289,7 @@
 
 			.elementor-2031 .elementor-element.elementor-element-4a1cb5e .elementor-icon-list-item,
 			.elementor-2031 .elementor-element.elementor-element-4a1cb5e .elementor-icon-list-item a {
-				font-size: 12px;
+				font-size: 15px;
 			}
 
 			.elementor-2031 .elementor-element.elementor-element-4a1cb5e>.elementor-widget-container {
@@ -4007,6 +4007,12 @@
 	<meta name="msapplication-config" content="/wp-content/uploads/fbrfg/browserconfig.xml">
 	<meta name="theme-color" content="#ffffff">
 	<style type="text/css">
+		td,
+		button {
+			user-select: text !important;
+			pointer-events: auto !important;
+		}
+
 		.breathing-img {
 			animation: breathe 3s ease-in-out infinite;
 			transform-origin: center center;
@@ -4058,6 +4064,63 @@
 		.countdown .time-box .label {
 			font-size: 12px;
 			margin-top: 5px;
+		}
+
+		@media (max-width: 768px) {
+			.kutipan-ayat p:first-of-type {
+				font-size: 11px;
+				line-height: 1.4;
+			}
+		}
+
+		button.copy-btn {
+			background-color: #B38AC6;
+			color: white;
+			border: none;
+			padding: 8px 16px;
+			border-radius: 8px;
+			cursor: pointer;
+			transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.3s ease;
+			position: relative;
+			overflow: hidden;
+		}
+
+		button.copy-btn:hover {
+			transform: scale(1.05);
+			box-shadow: 0 4px 12px rgba(179, 138, 198, 0.4);
+			background-color: #a470bb;
+		}
+
+		button.copy-btn:active {
+			transform: scale(0.98);
+			box-shadow: none;
+		}
+
+		button.copy-btn.copied {
+			background-color: #68c290;
+			/* Warna hijau sukses */
+		}
+
+		button.copy-btn .original-text,
+		button.copy-btn .copied-text {
+			display: inline-block;
+			transition: opacity 0.3s ease;
+		}
+
+		button.copy-btn .copied-text {
+			opacity: 0;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+		}
+
+		button.copy-btn.copied .original-text {
+			opacity: 0;
+		}
+
+		button.copy-btn.copied .copied-text {
+			opacity: 1;
 		}
 	</style>
 </head>
@@ -4934,16 +4997,29 @@
 																				class="elementor-menu-anchor"></div>
 																		</div>
 																	</div>
+																	<div class="elementor-element elementor-element-55cb5eb elementor-widget elementor-widget-heading"
+																		data-id="55cb5eb" data-element_type="widget"
+																		data-widget_type="heading.default">
+																		<div class="elementor-widget-container">
+																			<h2
+																				class="elementor-heading-title elementor-size-default">
+																				Wedding Event</h2>
+																			</h2>
+																		</div>
+																	</div>
 
 																	<div class="elementor-element elementor-element-e50922d elementor-widget elementor-widget-heading"
 																		data-id="e50922d" data-element_type="widget"
 																		data-widget_type="heading.default">
-																		<div class="elementor-widget-container">
-																			<p class="elementor-icon-list-text"><i>
-																					“Dan segala sesuatu Kami ciptakan
-																					berpasang-pasangan agar kamu
-																					mengingat
-																					(Kebesaran Allah)”.</i>
+																		<div
+																			class="elementor-widget-container kutipan-ayat">
+																			<p
+																				class="elementor-icon-list-text elementor-size-default">
+
+																				“Dan segala sesuatu Kami ciptakan
+																				berpasang-pasangan agar kamu
+																				mengingat
+																				(Kebesaran Allah)”.
 																			</p>
 																			<p
 																				class="elementor-heading-title elementor-size-default">
@@ -5088,29 +5164,14 @@
 																				--</p>
 																		</div>
 																	</div>
-																	<div class="elementor-element elementor-element-2dfbd9c elementor-widget elementor-widget-heading"
-																		data-id="2dfbd9c" data-element_type="widget"
+																	<div class="elementor-element elementor-element-55cb5eb elementor-widget elementor-widget-heading"
+																		data-id="55cb5eb" data-element_type="widget"
 																		data-widget_type="heading.default">
 																		<div class="elementor-widget-container">
-																			<p
+																			<h2
 																				class="elementor-heading-title elementor-size-default">
-																				Merupakan suatu kehormatan dan
-																				kebahagiaan bagi kami,
-
-																				apabila Bapak/Ibu/Saudara/i
-
-																				berkenan hadir untuk memberikan doa
-																				restu kepada kedua mempelai
-																			</p>
-																		</div>
-																	</div>
-																	<div class="elementor-element elementor-element-5a210fe elementor-widget elementor-widget-heading"
-																		data-id="5a210fe" data-element_type="widget"
-																		data-widget_type="heading.default">
-																		<div class="elementor-widget-container">
-																			<p
-																				class="elementor-heading-title elementor-size-default">
-																				--</p>
+																				Direction to Venue
+																			</h2>
 																		</div>
 																	</div>
 
@@ -5145,8 +5206,8 @@
 																			</div>
 																		</div>
 																	</div>
-																	<div class="elementor-element elementor-element-d1acf85 elementor-widget elementor-widget-heading"
-																		data-id="d1acf85" data-element_type="widget"
+																	<div class="elementor-element elementor-element-55cb5eb elementor-widget elementor-widget-heading"
+																		data-id="55cb5eb" data-element_type="widget"
 																		data-widget_type="heading.default">
 																		<div class="elementor-widget-container">
 																			<h2
@@ -5155,6 +5216,7 @@
 																			</h2>
 																		</div>
 																	</div>
+
 																	<div class="elementor-element elementor-element-982fad7 elementor-widget elementor-widget-heading"
 																		data-id="982fad7" data-element_type="widget"
 																		data-widget_type="heading.default">
@@ -5174,21 +5236,49 @@
 																		data-id="4a1cb5e" data-element_type="widget"
 																		data-widget_type="icon-list.default">
 																		<div class="elementor-widget-container">
-																			<ul class="elementor-icon-list-items">
+																			<table>
+																				<tr>
+																					<td id="bca">BCA 3431702779 A.N
+																						Armanda Yudha Bakti</td>
+																					<td>
+																						<button class="copy-btn"
+																							onclick="copyOnlyNumber(this, 'bca')">
+																							<span
+																								class="original-text">Salin</span>
+																							<span class="copied-text">✓
+																							</span>
+																						</button>
+																					</td>
+																				</tr>
+																				<tr>
+																					<td id="bni">BNI 1755376557 A.N
+																						Luxita Candra Kusuma</td>
+																					<td>
+																						<button class="copy-btn"
+																							onclick="copyOnlyNumber(this, 'bni')">
+																							<span
+																								class="original-text">Salin</span>
+																							<span class="copied-text">✓
+																							</span>
+																						</button>
+																					</td>
+																				</tr>
+																				<tr>
+																					<td id="shopee">Shopee Pay
+																						087839298628 A.N Armanda Yudha
+																						Bakti</td>
+																					<td>
+																						<button class="copy-btn"
+																							onclick="copyOnlyNumber(this, 'shopee')">
+																							<span
+																								class="original-text">Salin</span>
+																							<span class="copied-text">✓
+																							</span>
+																						</button>
+																					</td>
+																				</tr>
+																			</table>
 
-																				<li class="elementor-icon-list-item">
-
-																					<span
-																						class="elementor-icon-list-text">
-																						<b>BCA 3431702779 A.N Armanda
-																							Yudha Bakti<br>
-																							BNI 1755376557 A.N Luxita
-																							Candra Kusuma<br>
-																							Shopee Pay 087839298628 A.N
-																							Armanda Yudha Bakti
-																						</b></span>
-																				</li>
-																			</ul>
 																		</div>
 																	</div>
 																	<div class="elementor-element elementor-element-982fad7 elementor-widget elementor-widget-heading"
@@ -5228,7 +5318,8 @@
 																	<div class="elementor-element elementor-element-e50922d elementor-widget elementor-widget-heading"
 																		data-id="e50922d" data-element_type="widget"
 																		data-widget_type="heading.default">
-																		<div class="elementor-widget-container">
+																		<div
+																			class="elementor-widget-container kutipan-ayat">
 																			<p class="elementor-icon-list-text"><i>
 																					"Dan di antara tanda-tanda
 																					(kebesaran)-Nya ialah Dia
@@ -5329,6 +5420,7 @@
 																								data-widget_type="heading.default">
 																								<div
 																									class="elementor-widget-container">
+																									<br>
 																									<h2
 																										class="elementor-heading-title elementor-size-default">
 																										Luxita & Armanda
@@ -5665,14 +5757,22 @@
 
 																										Wassalamu’alaikum
 																										warahmatullahi
-																										wabarakatuh<br><br><br>
-
-																										Kami yang
-																										Berbahagia<br>
-																										<b>Luxita &
-																											Armanda</b>
-
+																										wabarakatuh
 																									</p>
+																								</div>
+																							</div>
+																							<div class="elementor-element elementor-element-4295ea26 elementor-widget elementor-widget-heading"
+																								data-id="4295ea26"
+																								data-element_type="widget"
+																								data-widget_type="heading.default">
+																								<div
+																									class="elementor-widget-container">
+																									<br><br>
+																									<h2
+																										class="elementor-heading-title elementor-size-default">
+
+																										Luxita & Armanda
+																									</h2>
 																								</div>
 																							</div>
 
@@ -6068,9 +6168,64 @@
 		defer='defer' id='weddingpress-wdp-js'></script>
 	<script type='text/javascript' src='wp-content/themes/landingpress-wp/assets/js/script.minb12b.js?ver=3.1.1'
 		defer='defer' id='landingpress-js'></script>
+	<script>
+		function copyOnlyNumber(button, elementId) {
+			const text = document.getElementById(elementId).textContent;
+			const match = text.match(/\d{6,}/);
+			const number = match ? match[0] : '';
+
+			if (!number) return;
+
+			const textarea = document.createElement("textarea");
+			textarea.value = number;
+			document.body.appendChild(textarea);
+			textarea.select();
+
+			try {
+				document.execCommand("copy");
+
+				button.classList.add("copied");
+
+				setTimeout(() => {
+					button.classList.remove("copied");
+				}, 2000);
+			} catch (err) {
+				console.error("Gagal menyalin", err);
+			}
+
+			document.body.removeChild(textarea);
+		}
+	</script>
+	<!-- <script>
+		function copyOnlyNumber(elementId) {
+			const text = document.getElementById(elementId).textContent;
+			const match = text.match(/\d{6,}/); // cari angka minimal 6 digit (biar aman)
+			const number = match ? match[0] : '';
+
+			if (!number) {
+				alert("Nomor rekening tidak ditemukan.");
+				return;
+			}
+
+			const textarea = document.createElement("textarea");
+			textarea.value = number;
+			document.body.appendChild(textarea);
+			textarea.select();
+
+			try {
+				document.execCommand("copy");
+				alert("Nomor rekening disalin: " + number);
+			} catch (err) {
+				alert("Gagal menyalin.");
+			}
+
+			document.body.removeChild(textarea);
+		}
+	</script> -->
 
 	<!--[if LandingPress]></body></html><![endif]-->
 	<!-- </body></html> -->
 </body>
+
 
 </html>
