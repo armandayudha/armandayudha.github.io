@@ -4335,7 +4335,7 @@
 																			</div>
 																		</div>
 																		<script>
-																			const weddingDate = new Date("2025-08-25T09:00:00").getTime();
+																			const weddingDate = new Date("2025-08-23T09:00:00").getTime();
 
 																			function updateCountdown() {
 																				const now = new Date().getTime();
@@ -4994,7 +4994,7 @@
 																					</span>
 																					<span
 																						class="elementor-icon-list-text">Sabtu,
-																						24 Agustus 2025</span>
+																						23 Agustus 2025</span>
 																				</li>
 																				<li class="elementor-icon-list-item">
 																					<span
@@ -5052,7 +5052,7 @@
 																					</span>
 																					<span
 																						class="elementor-icon-list-text">Sabtu,
-																						24 Agustus 2025</span>
+																						23 Agustus 2025</span>
 																				</li>
 																				<li class="elementor-icon-list-item">
 																					<span
@@ -5113,49 +5113,7 @@
 																				--</p>
 																		</div>
 																	</div>
-																	<div class="elementor-element elementor-element-e217e16 elementor-widget elementor-widget-countdown_simple"
-																		data-id="e217e16" data-element_type="widget"
-																		data-widget_type="countdown_simple.default">
-																		<div class="elementor-widget-container">
-																			<script type="text/javascript">
-																				!function (a) { "use strict"; a.extend = function (b, c) { if (b = b || {}, arguments.length > 2) for (var d = 1; d < arguments.length; d++)a.extend(b, arguments[d]); else for (var e in c) b[e] = c[e]; return b }; var b = function (b) { this.conf = a.extend({ dateStart: new Date, dateEnd: new Date((new Date).getTime() + 864e5), selector: ".timer", msgBefore: "Be ready!", msgAfter: "It's over, sorry folks!", msgPattern: "{days} days, {hours} hours, {minutes} minutes and {seconds} seconds left.", onStart: null, onEnd: null, leadingZeros: !1, initialize: !0 }, b), this.started = !1, this.selector = document.querySelectorAll(this.conf.selector), this.interval = 1e3, this.patterns = [{ pattern: "{years}", secs: 31536e3 }, { pattern: "{months}", secs: 2628e3 }, { pattern: "{weeks}", secs: 604800 }, { pattern: "{days}", secs: 86400 }, { pattern: "{hours}", secs: 3600 }, { pattern: "{minutes}", secs: 60 }, { pattern: "{seconds}", secs: 1 }], this.initialize !== !1 && this.initialize() }; b.prototype.initialize = function () { return this.defineInterval(), this.isOver() ? this.outOfInterval() : void this.run() }, b.prototype.seconds = function (a) { return a.getTime() / 1e3 }, b.prototype.isStarted = function () { return this.seconds(new Date) >= this.seconds(this.conf.dateStart) }, b.prototype.isOver = function () { return this.seconds(new Date) >= this.seconds(this.conf.dateEnd) }, b.prototype.run = function () { var b, c = this, d = Math.abs(this.seconds(this.conf.dateEnd) - this.seconds(new Date)); this.isStarted() ? this.display(d) : this.outOfInterval(), b = a.setInterval(function () { d--, 0 >= d ? (a.clearInterval(b), c.outOfInterval(), c.callback("end")) : c.isStarted() && (c.started || (c.callback("start"), c.started = !0), c.display(d)) }, this.interval) }, b.prototype.display = function (a) { for (var b = this.conf.msgPattern, c = 0; c < this.patterns.length; c++) { var d = this.patterns[c]; if (-1 !== this.conf.msgPattern.indexOf(d.pattern)) { var e = Math.floor(a / d.secs), f = this.conf.leadingZeros && 9 >= e ? "0" + e : e; a -= e * d.secs, b = b.replace(d.pattern, f) } } for (var g = 0; g < this.selector.length; g++)this.selector[g].innerHTML = b }, b.prototype.defineInterval = function () { for (var a = this.patterns.length; a > 0; a--) { var b = this.patterns[a - 1]; if (-1 !== this.conf.msgPattern.indexOf(b.pattern)) return void (this.interval = 1e3 * b.secs) } }, b.prototype.outOfInterval = function () { for (var a = new Date < this.conf.dateStart ? this.conf.msgBefore : this.conf.msgAfter, b = 0; b < this.selector.length; b++)this.selector[b].innerHTML !== a && (this.selector[b].innerHTML = a) }, b.prototype.callback = function (b) { var c = b.capitalize(); "function" == typeof this.conf["on" + c] && this.conf["on" + c](), "undefined" != typeof a.jQuery && a.jQuery(this.conf.selector).trigger("countdown" + c) }, String.prototype.capitalize = function () { return this.charAt(0).toUpperCase() + this.slice(1) }, a.Countdown = b }(window); 
-																			</script>
 
-																			<div
-																				class="elementor-countdown-simple elementor-countdown-floating-no">
-																				<div id="lp-countdown-fixed-e217e16">
-																					<div class="countdown-intro">Waktu
-																						Menuju Acara</div> <span
-																						class="count-container"><span
-																							class="count-box"><span
-																								class="count-num">00</span>
-																							<span
-																								class="count-label">Hari</span></span>
-																						<span class="count-box"><span
-																								class="count-num">00</span>
-																							<span
-																								class="count-label">Jam</span></span>
-																						<span class="count-box"><span
-																								class="count-num">00</span>
-																							<span
-																								class="count-label">Menit</span></span><span
-																							class="count-box"> <span
-																								class="count-num">00</span>
-																							<span
-																								class="count-label">Detik</span></span></span>
-																				</div>
-																			</div>
-																			<script type="text/javascript">
-																				new Countdown({
-																					selector: '#lp-countdown-fixed-e217e16',
-																					dateEnd: new Date('09/24/2023 10:00 AM'),
-																					msgPattern: '<div class="countdown-intro">Waktu Menuju Acara</div><span class="count-container"><span class="count-box"><span class="count-num">{days}</span> <span class="count-label">Hari</span></span> <span class="count-box"><span class="count-num">{hours}</span> <span class="count-label">Jam</span></span> <span class="count-box"><span class="count-num">{minutes}</span> <span class="count-label">Menit</span></span><span class="count-box"> <span class="count-num">{seconds}</span> <span class="count-label">Detik</span></span></span>',
-																					msgAfter: "",
-																					leadingZeros: true,
-																				});
-																			</script>
-																		</div>
-																	</div>
 																	<div class="elementor-element elementor-element-57acbabd elementor-widget elementor-widget-html"
 																		data-id="57acbabd" data-element_type="widget"
 																		data-widget_type="html.default">
@@ -5407,7 +5365,7 @@
 																												method="get"
 																												class="lp-form lp-whatsapp-form"
 																												id="lp-whatsapp-form-2a7064d"
-																												data-waurl="https://api.whatsapp.com/send?phone=6287839298628&amp;text=Halo%2C%20Luxita%20%26%20Armanda%2C%20saya%20ingin%20menginformasikan%20kehadiran%20di%20acara%20resepsi%20pernikahan%20Luxita%20%20dan%20Armanda%20%20pada%20Hari%20Sabtu%2C%2024%20Agustus%202025%3A%0A%0ANama%3A%20%25name%25%0AInformasi%20Kehadiran%3A%20%25product%25%0AJumlah%20Tamu%3A%20%25extra%25%20Orang%20%0A%0APesan%3A%0A%0A%25address%25">
+																												data-waurl="https://api.whatsapp.com/send?phone=6287839298628&amp;text=Halo%2C%20Luxita%20%26%20Armanda%2C%20saya%20ingin%20menginformasikan%20kehadiran%20di%20acara%20resepsi%20pernikahan%20Luxita%20%20dan%20Armanda%20%20pada%20Hari%20Sabtu%2C%2023%20Agustus%202025%3A%0A%0ANama%3A%20%25name%25%0AInformasi%20Kehadiran%3A%20%25product%25%0AJumlah%20Tamu%3A%20%25extra%25%20Orang%20%0A%0APesan%3A%0A%0A%25address%25">
 																												<div
 																													class="lp-form-fields-wrapper">
 																													<div
@@ -5549,7 +5507,7 @@
 																												method="get"
 																												class="lp-form lp-whatsapp-form"
 																												id="lp-whatsapp-form-87aabc2"
-																												data-waurl="https://api.whatsapp.com/send?phone=6285171027742&amp;text=Halo%2C%20Luxita%20%26%20Armanda%2C%20saya%20ingin%20menginformasikan%20kehadiran%20di%20acara%20resepsi%20pernikahan%20Luxita%20%20dan%20Armanda%20%20pada%20Hari%20Sabtu%2C%2024%20Agustus%202025%3A%0A%0ANama%3A%20%25name%25%0AInformasi%20Kehadiran%3A%20%25product%25%0AJumlah%20Tamu%3A%20%25extra%25%20Orang%20%0A%0APesan%3A%0A%0A%25address%25">
+																												data-waurl="https://api.whatsapp.com/send?phone=6285171027742&amp;text=Halo%2C%20Luxita%20%26%20Armanda%2C%20saya%20ingin%20menginformasikan%20kehadiran%20di%20acara%20resepsi%20pernikahan%20Luxita%20%20dan%20Armanda%20%20pada%20Hari%20Sabtu%2C%2023%20Agustus%202025%3A%0A%0ANama%3A%20%25name%25%0AInformasi%20Kehadiran%3A%20%25product%25%0AJumlah%20Tamu%3A%20%25extra%25%20Orang%20%0A%0APesan%3A%0A%0A%25address%25">
 																												<div
 																													class="lp-form-fields-wrapper">
 																													<div
